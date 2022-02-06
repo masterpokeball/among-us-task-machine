@@ -1,8 +1,8 @@
 radio.onReceivedValue(function (name, value) {
-    if (name == "fake" && value == 1) {
+    if (input.buttonIsPressed(Button.AB) && (name == "fake" && value == 1)) {
         basic.pause(5000)
         basic.showString("Task faked!")
-    } else if (name == "real" && value >= 2) {
+    } else if (name == "real" && value >= 2 && input.buttonIsPressed(Button.AB)) {
         basic.pause(5000)
         basic.showString("Task finished!")
     }
